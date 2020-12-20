@@ -1,4 +1,4 @@
-from netpie-adapter.py import netPieAdaper;
+from netpie-adapter import netPieAdaper;
 
 class Box:
     def __init__(self, id, treeList, centralData):
