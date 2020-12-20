@@ -13,7 +13,7 @@ DEVICE_TOKEN = "KCHkxJLxrsLBwo7bA53AfHJFSVt7BeC6"
 def on_connect(client, userdata, flags, rc):
     print("Result from connect: {}".format(
         mqtt.connack_string(rc)))
-    # client.subscribe("@msg/events")
+    # client.subscribe("@shadow/data/updated")
 # def on_message(client, userdata, msg):
 #     #data_ = str(msg.payload).split(",")
 #     print("Get Messages: {}".format(data_))
@@ -34,7 +34,7 @@ while True:
     # lemon_data = LemonData(30)
     sensor_data['soil_moisture'] = 30
     print(json.dumps({"data": sensor_data}))
-    client.publish('@msg/events', json.dumps({"data":sensor_data}), 1)
+    client.publish('@shadow/data/update', json.dumps({"data":sensor_data}), 1)
     print('published')
     #sleep for seconds
     time.sleep(60)
