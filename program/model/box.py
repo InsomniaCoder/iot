@@ -1,6 +1,6 @@
 from netpie-adapter import netPieAdaper;
 
-class Box:
+class box:
     def __init__(self, id, treeList, centralData):
         self.id = id
         self.treeList = treeList
