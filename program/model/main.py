@@ -1,7 +1,6 @@
 from box import Box
 from tree import Tree
 from centralData import CentralData
-import json
 
 # tree data
 first_tree_moisture = 35

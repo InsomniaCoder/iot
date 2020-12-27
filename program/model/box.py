@@ -1,7 +1,6 @@
 from netpieAdapter import NetpieAdapter
 import json
 
-
 class Box:
     def __init__(self, id, tree_list, central_data):
         self.id = id
