@@ -1,8 +1,8 @@
 import json
 
-class TemperatureData:
-    def __init__(self, temperature):
-        self.temperature = temperature
+class EventData:
+    def __init__(self, data):
+        self.data = data
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,

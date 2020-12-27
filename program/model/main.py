@@ -1,25 +1,21 @@
-from box import box
-from centralData import centralData
-from tree import tree
-from soilMoisture import soilMoistureData
+from box import Box
+from tree import Tree
+from centralData import CentralData
+import json
 
+# tree data
+first_tree_moisture = 35
+first_tree = Tree(1,1,1,first_tree_moisture)
+second_tree_moisture = 37
+second_tree = Tree(2,2,1,second_tree_moisture)
+third_tree_moisture = 36
+third_tree = Tree(9,1,2,third_tree_moisture)
+fourth_tree_moisture = 36
+fourth_tree = Tree(10,2,2,fourth_tree_moisture)
 
-# get sensor data
-temperature = 35
-firstBoxCentralData = centralData(temperature)
-# create a Tree
-# row 1 column 1 
-firstTreeSoilMoisture = soilMoistureData(31)
-firstTree = tree(1,1,1,firstTreeSoilMoisture)
-# row 1 column 2 
-secondTreeSoilMoisture = soilMoistureData(36)
-secondTree = tree(2,1,1,secondTreeSoilMoisture)
-# create a box and supplied data
-firstBox = box(1,[firstTree,secondTree],firstBoxCentralData)
+# central data
+temperature = 39
+central_data = CentralData(temperature)
 
-# publish box data to netpie
-firstBox.publishBoxData()
-
-
-firstBox = box(1,{},{})
-firstBox.publishBoxData()
+first_box = Box(1,[first_tree,second_tree,third_tree,fourth_tree],central_data)
+first_box.publish_box_data()
