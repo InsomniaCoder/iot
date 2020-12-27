@@ -1,8 +1,5 @@
-import sys
-import time
 import paho.mqtt.client as mqtt
 import json
-import os
 
 class netPieAdaper:
 
@@ -23,6 +20,8 @@ class netPieAdaper:
         client.connect(self.NETPIE_HOST, 1883)
 
         jsonContent = json.dumps({"data":sensor_data})
-        print('content : ', jsonContent )
+
+        print('publishing content : ', jsonContent )
         client.publish('@shadow/data/update', jsonContent, 1)
+        print('content published')
         client.disconnect()
