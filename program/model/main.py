@@ -21,3 +21,5 @@ firstBox = box(1,[firstTree,secondTree],firstBoxCentralData)
 firstBox.publishBoxData()
 
 
+firstBox = box(1,{},{})
+firstBox.publishBoxData()

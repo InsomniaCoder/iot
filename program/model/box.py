@@ -1,5 +1,4 @@
-from netpieAdapter import netPieAdaper
-import json
+from netpieAdapter import netPieAdaper;
 
 class box:
     def __init__(self, id, treeList, centralData):
@@ -8,10 +7,10 @@ class box:
         self.centralData = centralData
         
     def publishBoxData(self):
-        print('publishing box data...')
-        adapter = netPieAdaper()
 
-        boxDataJsonString = json.dumps(self.__dict__)
-        print(boxDataJsonString)
-        # sensor_data = {'soil_moisture': 0}
-        adapter.publishData(boxDataJsonString)
+        print("Publishing data for box: {}".format(
+        self.id))
+
+        adapter = netPieAdaper()
+        sensor_data = {"soil_moisture": 0}
+        adapter.publishData(sensor_data)
