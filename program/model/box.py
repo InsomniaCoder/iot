@@ -1,4 +1,4 @@
-from netpieAdapter import NetpieAdapter
+from prometheusAdapter import PrometheusAdapter
 import json
 
 class Box:
@@ -16,5 +16,5 @@ class Box:
         print("Publishing data for box: {}".format(
         self.id))
 
-        adapter = NetpieAdapter()
+        adapter = PrometheusAdapter()
         adapter.publish_data(self)

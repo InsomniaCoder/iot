@@ -11,6 +11,8 @@ pip3 install paho-mqtt==1.3.1
 git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 cd Adafruit_Python_DHT
 sudo python3 setup.py install
+
+pip install requests
 ```
 # Run
 
