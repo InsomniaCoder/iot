@@ -24,9 +24,22 @@ USB mouse and keyboard
 USB to USB data cable
 HDMI
 
+#### Steps
+
+1. download Rasberry Pi OS from https://www.raspberrypi.org/downloads/raspbian/ 
+2. download and install https://www.balena.io/etcher/
+3. write OS on SD card
+4. create empty `ssh` file on boot directory
+
+#### SSH
+default user name = pi
+default password = raspberry
+
 #### Network interfaces
 
-actual path: `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
+create file named `wpa_supplicant.conf` in boot directory with below content
+
+actual path in pi: `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
 
 multiple networks:
 ```
@@ -46,10 +59,17 @@ network={
 ```
 
 #### Setup static ip address
+
+1. boot pi
+2. if you are connected to the monitor, ip address will be shown in the screen
+3. otherwise, use program to scan ip address in the same network
+4. ssh to the ip
+
+then 
+
 sudo apt-get update
 sudo apt-get install vim
 sudo vim /etc/dhcpcd.conf
-
 
  eth0 = wired, wlan0 = wireless
  
@@ -66,10 +86,6 @@ static domain_name_servers=192.168.0.1
 find router ip by ip route | grep default
 sudo reboot // sudo shutdown
 ifconfig
-
-#### SSH
-default user name = pi
-default password = raspberry
 
 ## Get Temperature information from DHT11
 
