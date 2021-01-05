@@ -43,11 +43,16 @@ actual path in pi: `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
 
 multiple networks:
 ```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=TH
+
 network={
     ssid="HomeOneSSID"
     psk="passwordOne"
     priority=1
     id_str="homeOne"
+    key_mgmt=WPA-PSK
 }
 
 network={
@@ -55,6 +60,7 @@ network={
     psk="passwordTwo"
     priority=2
     id_str="homeTwo"
+    key_mgmt=WPA-PSK
 }
 ```
 
