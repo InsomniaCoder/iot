@@ -7,7 +7,7 @@
 | Soil Ph Sensor |      | 
 | Soil Moisure Sensor  |      |
 | Light/UV Sensor   | Text     | https://www.switchdoc.com/2016/10/simple-iot-sunlight-sensing-raspberry-pi-project-part-1/ |
-| Temperature and Humidity Sensor  | DHT11     |https://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-the-raspberry-pi/
+| Temperature and Humidity Sensor  | DHT22    |https://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-the-raspberry-pi/
 
 
 ## Set up
@@ -92,6 +92,22 @@ static domain_name_servers=192.168.0.1
 find router ip by ip route | grep default
 sudo reboot // sudo shutdown
 ifconfig
+
+## Use our own image to read sensor
+
+1. sudo apt-get update 
+2. sudo apt-get install vim docker
+3. `docker run -d insomniacoder/argitech-iot:latest --name iot`
+
+## Build our own image directly on the board
+
+1. sudo apt-get update 
+2. sudo apt-get install vim docker
+3. sudo git clone https://github.com/InsomniaCoder/iot.git
+4. cd program
+5. sudo docker build . -t argitech-iot
+6. sudo docker run --name argitech -it argitech-iot
+
 
 ## Get Temperature information from DHT22
 
