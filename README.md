@@ -43,15 +43,16 @@ actual path in pi: `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
 
 multiple networks:
 ```
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
+
+
 country=TH
+update_config=1
+ctrl_interface=DIR=/var/run/wpa_supplicant
 
 network={
     ssid="HomeOneSSID"
     psk="passwordOne"
     priority=1
-    id_str="homeOne"
     key_mgmt=WPA-PSK
 }
 
@@ -59,7 +60,6 @@ network={
     ssid="HomeTwoSSID"
     psk="passwordTwo"
     priority=2
-    id_str="homeTwo"
     key_mgmt=WPA-PSK
 }
 ```
@@ -89,24 +89,31 @@ static routers=192.168.0.1
 static domain_name_servers=192.168.0.1
 ```
 
-find router ip by ip route | grep default
+find router ip by ifconfig | grep default
 sudo reboot // sudo shutdown
 ifconfig
+
+## find all devices
+
+1. ifconfig | grep broadcast
+2. ping broadcast
+3. arp -a
 
 ## Use our own image to read sensor
 
 1. sudo apt-get update 
 2. sudo apt-get install vim docker
-3. `docker run -d insomniacoder/argitech-iot:latest --name iot`
+3. `docker run -d --privileged insomniacoder/argitech-iot`
 
 ## Build our own image directly on the board
 
 1. sudo apt-get update 
-2. sudo apt-get install vim docker
-3. sudo git clone https://github.com/InsomniaCoder/iot.git
-4. cd program
-5. sudo docker build . -t argitech-iot
-6. sudo docker run --name argitech -it argitech-iot
+2. sudo apt-get install vim git
+3. sudo curl -sSL https://get.docker.com/ | sh
+4. sudo git clone https://github.com/InsomniaCoder/iot.git
+5. cd iot/program
+6. sudo docker build . -t argitech-iot
+7. sudo docker run --name argitech -it argitech-iot
 
 
 ## Get Temperature information from DHT22
