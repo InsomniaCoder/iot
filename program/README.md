@@ -1,24 +1,12 @@
 # Installation Guide
 
-start Docker container mounting to project dir
-`docker run --name argitech -it -v ${PWD}:/usr/src/project ubuntu`
+---
+Build docker image with 
+`docker build . -t argitech-iot`
+---
+Run with
+`docker run --name argitech -it argitech-iot`
+---
+we are using **DHT 22** sensor to get `humidity` and `temperature` sensor data
 
-```
-sudo apt-get update
-sudo apt-get install build-essential python-dev python3 python3-pip
-pip3 install paho-mqtt==1.3.1
-
-git clone https://github.com/adafruit/Adafruit_Python_DHT.git
-cd Adafruit_Python_DHT
-sudo python3 setup.py install
-
-pip install requests
-```
-# Run
-
-```
-python3 netpie-adapter.py
-```
-
-# Ref
-https://netpie.io/tutorials/RaspberryPi
+example: https://github.com/adafruit/Adafruit_Python_DHT/blob/master/examples/AdafruitDHT.py

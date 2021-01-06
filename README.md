@@ -93,7 +93,7 @@ find router ip by ip route | grep default
 sudo reboot // sudo shutdown
 ifconfig
 
-## Get Temperature information from DHT11
+## Get Temperature information from DHT22
 
 1. sudo apt-get install git-core
 2. git clone https://github.com/adafruit/Adafruit_Python_DHT.git
@@ -104,9 +104,11 @@ ifconfig
 
 https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/
 
-The example script takes two parameters. The first is the sensor type so is set to “11” to represent the DHT11. The second is the GPIO number so for my example I am using “17” for GPIO17. You can change this if you are using a different GPIO pin for your data/out wire.
+The example script takes two parameters. The first is the sensor type so is set to “22” to represent the DHT22.
+ The second is the GPIO number so for my example I am using “4” for GPIO4.
+ You can change this if you are using a different GPIO pin for your data/out wire.
 
 ![](https://i.imgur.com/2GZuTKV.png)
 
-DHT11
-![](https://i.imgur.com/I57mhaP.png)
+DHT22
+![](https://i.imgur.com/EU9zirp.png)
