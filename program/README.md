@@ -2,10 +2,7 @@
 
 ---
 Build docker image with 
-`docker build . -t argitech-iot`
----
-Run with
-`docker run --name argitech -it -e BOX_NUMBER=0 -e DHT_GPIO=4 argitech-iot`
+`sudo docker build . --build-arg DHT_GPIO=4 --build-arg BOX_NUMBER=0 -t argitech-iot`
 ---
 we are using **DHT 22** sensor to get `humidity` and `temperature` sensor data
 
