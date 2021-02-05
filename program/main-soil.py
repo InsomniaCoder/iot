@@ -23,9 +23,9 @@ while True:
     time.sleep(0.1) #in seconds, suspends execution.
     GPIO.setup(gpio_pin, GPIO.IN)
     #Count loops until voltage across capacitor reads high on GPIO
-    while (GPIO.input(gpio_pin) == GPIO.HIGH):
+    while (GPIO.input(gpio_pin) == GPIO.LOW):
         print 'wet'
-        time.sleep(0.1) #in seconds, suspends execution.
+        time.sleep(60) #in seconds, suspends execution.
     print 'dry!'
 
     print('publishing central data from adapter...')
