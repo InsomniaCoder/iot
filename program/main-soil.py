@@ -9,8 +9,8 @@ import time
 import sys
 
 # parameter
-box_number = sys.argv[0]
-gpio_pin = int(sys.argv[1])
+box_number = sys.argv[1]
+gpio_pin = int(sys.argv[2])
 
 GPIO.setmode(GPIO.BCM)
 
