@@ -135,3 +135,7 @@ The example script takes two parameters. The first is the sensor type so is set 
 
 DHT22
 ![](https://i.imgur.com/EU9zirp.png)
+
+![](https://i.imgur.com/1iRM19l.png)
+![](https://i.imgur.com/25iYVcb.png)
+
