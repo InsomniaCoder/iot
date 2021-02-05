@@ -37,6 +37,7 @@ while True:
 
     print('response : ', response)
     print('content published')
+    time.sleep(60) #in seconds, suspends execution.
 
 GPIO.cleanup()
 #  soil code ref: https://github.com/jenfoxbot/SoilSensorAPI/blob/master/JenFoxBotSMSV1c.py
