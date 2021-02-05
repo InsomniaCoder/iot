@@ -1,5 +1,3 @@
-import sys
-
 from prometheusAdapter import PrometheusAdapter
 import json
 
@@ -19,6 +17,6 @@ class CentralData:
         self.id))
 
         adapter = PrometheusAdapter()
-        adapter.publish_data(self)
+        adapter.publish_central_data(self)
 
 

@@ -22,9 +22,7 @@ while True:
         print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
 
         central_data = CentralData(temperature, humidity)
-        centralBox = Box(box_number,[],central_data)
-
-        centralBox.publish_box_data()
+        central_data.publish_box_data()
     else:
         print('Failed to get reading. Try again!')
 
