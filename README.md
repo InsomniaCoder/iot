@@ -103,7 +103,7 @@ ifconfig
 
 1. sudo apt-get update 
 2. sudo apt-get install vim docker
-3. `docker run -d --privileged insomniacoder/argitech-iot`
+3. `sudo docker run --name argitech -it -e BOX_NUMBER=0 DHT_GPIO=4 --privileged insomniacoder/argitech-iot`
 
 ## Build our own image directly on the board
 
@@ -113,11 +113,11 @@ ifconfig
 4. sudo git clone https://github.com/InsomniaCoder/iot.git
 5. cd iot/program
 6. sudo docker build . -t argitech-iot
-7. sudo docker run --name argitech -it argitech-iot
+7. sudo docker run --name argitech -it -e BOX_NUMBER=0 DHT_GPIO=4 --privileged argitech-iot
 
+# Reference:
 
 ## Get Temperature information from DHT22
-
 1. sudo apt-get install git-core
 2. git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 3. cd Adafruit_Python_DHT
