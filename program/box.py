@@ -2,10 +2,9 @@ from prometheusAdapter import PrometheusAdapter
 import json
 
 class Box:
-    def __init__(self, id, tree_list, central_data):
+    def __init__(self, id, tree_list):
         self.id = id
         self.treeList = tree_list
-        self.centralData = central_data
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,
