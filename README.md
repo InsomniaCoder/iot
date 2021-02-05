@@ -113,7 +113,7 @@ ifconfig
 4. sudo git clone https://github.com/InsomniaCoder/iot.git
 5. cd iot/program
 6. sudo docker build . -t argitech-iot
-7. sudo docker run --name argitech -it -e BOX_NUMBER=0 DHT_GPIO=4 --privileged argitech-iot
+7. `sudo docker run --name argitech -it -e BOX_NUMBER=0 DHT_GPIO=4 --privileged argitech-iot`
 
 # Reference:
 
