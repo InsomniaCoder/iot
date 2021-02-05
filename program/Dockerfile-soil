@@ -8,4 +8,4 @@ WORKDIR /usr/src/app
 
 COPY . .
 RUN apt-get update && pip install --no-cache-dir requests Adafruit_DHT
-CMD [ "python", "./main-soil.py", BOX_NUMBER, DHT_GPIO]
+CMD ["sh", "-c", "python main-soil.py $BOX_NUMBER $DHT_GPIO"]
