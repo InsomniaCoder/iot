@@ -4,8 +4,8 @@
 
 | Data | Sensor | Reference |
 | -------- | -------- | -------- |
-| Soil Ph Sensor |      | 
-| Soil Moisure Sensor  |      |
+| Soil Ph Sensor |      | |
+| Soil Moisure Sensor  | ESP8266     |    |
 | Light/UV Sensor   | Text     | https://www.switchdoc.com/2016/10/simple-iot-sunlight-sensing-raspberry-pi-project-part-1/ |
 | Temperature and Humidity Sensor  | DHT22    |https://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-the-raspberry-pi/
 
@@ -135,3 +135,7 @@ The example script takes two parameters. The first is the sensor type so is set 
 
 DHT22
 ![](https://i.imgur.com/EU9zirp.png)
+
+![](https://i.imgur.com/1iRM19l.png)
+![](https://i.imgur.com/25iYVcb.png)
+
