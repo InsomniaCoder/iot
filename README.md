@@ -4,8 +4,8 @@
 
 | Data | Sensor | Reference |
 | -------- | -------- | -------- |
-| Soil Ph Sensor |      | 
-| Soil Moisure Sensor  |      |
+| Soil Ph Sensor |      | |
+| Soil Moisure Sensor  | ESP8266     |    |
 | Light/UV Sensor   | Text     | https://www.switchdoc.com/2016/10/simple-iot-sunlight-sensing-raspberry-pi-project-part-1/ |
 | Temperature and Humidity Sensor  | DHT22    |https://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-the-raspberry-pi/
 
