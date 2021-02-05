@@ -33,7 +33,7 @@ while True:
 
     print(data)
 
-    response = requests.post(self.PROMETHEUS_GATEWAY_URL, data=data, headers={'Content-Type': 'application/octet-stream'})
+    response = requests.post(PROMETHEUS_GATEWAY_URL, data=data, headers={'Content-Type': 'application/octet-stream'})
 
     print('response : ', response)
     print('content published')
