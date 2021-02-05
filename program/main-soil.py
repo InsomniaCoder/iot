@@ -1,6 +1,5 @@
 # data model
 from box import Box
-from centralData import CentralData
 from tree import Tree
 # soil data
 import RPi.GPIO as GPIO
@@ -11,7 +10,7 @@ import sys
 
 # parameter
 box_number = sys.argv[0]
-gpio_pin = sys.argv[1]
+gpio_pin = int(sys.argv[1])
 
 GPIO.setmode(GPIO.BCM)
 
@@ -27,7 +26,7 @@ while True:
         time.sleep(5) #in seconds, suspends execution.
     print 'dry!'
     #publish readings
-    box = Box(box_number,[Tree(1,1,'dry!')])
+    box = Box(box_number,[Tree(1,1,1,1)])
     box.publish_box_data()
 
 GPIO.cleanup()
